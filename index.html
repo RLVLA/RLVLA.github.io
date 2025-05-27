@@ -206,7 +206,7 @@
     <div class="container is-max-desktop">
       <h1 class="title">2. Evaluating fine-tuning methods on VLA generalization</h1><br>
       <div class="content">
-        <h2 class="title is-4">2.1 Comparison between RL and SFT</h2>
+        <h2 class="title is-4">2.1 Environments and datasets</h2>
         <div class="content is-medium">
           <p>
             Inspired by prior works (Fan et al., 2025; Stone et al., 2023) and the concept of Vision-Language-Action
@@ -235,22 +235,33 @@
             unseen receptacles, 5 new table surroudings, and 16 distractor textures.
           </p>
         </div>
-        <div class="is-centered">
-          <img src="static/images/rl_methods.png" alt="Overview and performance of different RL methdos" />
-        </div>
       </div>
 
       <br><br>
       <div class="content">
-        <h2 class="title is-4">2.2 Comparison Results</h2>
+        <h2 class="title is-4">2.2 Comparison between SFT and RL</h2>
+        <br>
+        <div class="columns is-vcentered is-centered">
+          <div class="is-11 column">
+            <img src="static/images/rlsft_results.png"
+              alt="Performance comparison of RL and SFT w.r.t. number of demonstrations" />
+          </div>
+        </div>
+        <div class="content is-medium">
+          <p>
+            In the aspect of <b>data scale</b>, SFT saturates at 16k demonstrations.
+            At convergence, RL performs comparably to SFT-16k in the training setting and 42.6% better on unseen objects
+            and tables.
+          </p>
+        </div>
+        <br>
         <div class="columns is-vcentered">
           <div class="column is-8">
             <img src="static/images/main_results.png" alt="Performance of generalization of SFT and RL" />
           </div>
           <div class="column content is-medium">
             <p>
-              Inspired by prior works (Fan et al., 2025; Stone et al., 2023) and the concept of Vision-Language-Action
-              models, we define three dimensions of generalization:
+              In the aspect of <b>generalization</b>, we find
             </p>
             <p> <b>Vision</b>: SFT and RL perform comparably </p>
             <p> <b>Semantics</b>: RL improves moderately </p>
